@@ -1,0 +1,35 @@
+<div class="col s12 m7">
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+          <div class="input-field col s12">
+            <input id="name" type="text" class="validate" [(ngModel)]="Comentario.name" required>
+            <label for="name">Nombre</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" [(ngModel)]="Comentario.email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="comentario" class="materialize-textarea" [(ngModel)]="Comentario.body" required></textarea>
+            <label for="comentario">Comentario</label>
+          </div>
+      </div>
+      <div class="card-action">
+        <a (click)="addComment();" class="waves-effect waves-light btn-large">Comentar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" *ngFor="let Comment of Comments" class="collection-item avatar">
+  <div class="col s12 m6">
+    <div class="card-panel teal">
+      <span class="white-text">Comment: {{Comment.body}}</span>
+      <br>
+      <br>
+      <span class="white-text"><strong>Name: </strong>{{Comment.name}}</span>
+      <br>
+      <span class="white-text"><strong>E-mail: </strong>{{Comment.email}}</span>
+    </div>
+  </div>
+</div>

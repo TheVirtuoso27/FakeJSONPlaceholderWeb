@@ -1,0 +1,18 @@
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" class="brand-logo">Componentes</a>
+    <ul class="right hide-on-med-and-down">
+        <li><a routerLink="/posts">Posts</a></li>
+        <li><a routerLink="/albums">Albums</a></li>
+        <li><a routerLink="/todos">Todos</a></li>
+        <li><a (click)="logout(); $event.preventDefault()">Logout</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a style="color:rgb(7, 110, 158)" routerLink="/posts">Posts</a></li>
+      <li><a style="color:rgb(7, 110, 158)" routerLink="/albums">Albums</a></li>
+      <li><a style="color:rgb(7, 110, 158)" routerLink="/todos">Todos</a></li>
+      <li><a style="color:rgb(7, 110, 158)" (click)="logout(); $event.preventDefault()">Logout</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+</nav>

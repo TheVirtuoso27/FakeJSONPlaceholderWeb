@@ -1,0 +1,23 @@
+<!-- <ul class="collection">
+    <li *ngFor="let Post of Posts" class="collection-item avatar">
+      <span class="title"><strong>Title:</strong> {{Post.title}}</span>
+      <p><strong>User:</strong> {{Post.userId}}</p>
+      <p><strong>ID Post:</strong> {{Post.id}}</p>
+      <p><strong>Body:</strong> {{Post.body}}</p>
+    </li>
+</ul> -->
+
+<div class="row" *ngFor="let Post of Posts" class="collection-item avatar">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title"><strong>Title:</strong> {{Post.title}}</span>
+        <p><strong>Body:</strong> {{Post.body}}</p>
+      </div>
+      <div class="card-action">
+        <a routerLink="/post/{{Post.id}}"><strong>Entrar al Post</strong> {{Post.id}}</a>
+        <a (click)="eventoBorrar(Post.id);"><strong>Eliminar Post</strong></a>
+      </div>
+    </div>
+  </div>
+</div>

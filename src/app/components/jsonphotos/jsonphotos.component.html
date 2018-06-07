@@ -1,0 +1,16 @@
+<div class="col s12 m7" *ngFor="let Photo of Photos" class="collection-item avatar">
+  <h5 class="header"><strong>Title: </strong>{{Photo.title}}</h5>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="{{Photo.thumbnailUrl}}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.</p>
+      </div>
+      <div class="card-action">
+        <button class="waves-effect waves-light btn" routerLink="/photo/{{Photo.id}}">Ver</button>
+      </div>
+    </div>
+  </div>
+</div>

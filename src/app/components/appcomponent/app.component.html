@@ -1,0 +1,19 @@
+<div *ngIf="!logear">
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="logear">
+  <app-navbar></app-navbar>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+

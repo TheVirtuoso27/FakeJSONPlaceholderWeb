@@ -1,0 +1,12 @@
+<ul class="collection with-header">
+    <li class="collection-header"><h4>Todos</h4><br><h5>Clickea para eliminar</h5></li>
+    <li class="collection-item" *ngFor="let Todo of Todos">
+      <div (click)="deleteTodo(Todo.id);"><strong>Title: </strong>{{Todo.title}}
+        <a class="secondary-content">
+          <div *ngIf="Todo.completed"><i class="material-icons">done</i></div>
+          <div *ngIf="!Todo.completed"><i class="material-icons">error</i></div>
+        </a>
+      </div>
+    </li>
+  </ul>
+
